@@ -1,0 +1,58 @@
+/* ══════════════════════════════════════════════
+   TOKENS.CSS — Sistema de Design Tokens Ari Katay
+   ══════════════════════════════════════════════ */
+
+:root {
+  /* ── Colores ── */
+  --bg-primary:    #0A0A0B;
+  --bg-card:       #121214;
+  --bg-card-hover: #1a1a1e;
+  --border-subtle: #1F1F23;
+  --accent:        #D4AF37;
+  --accent-hover:  #E5C158;
+  --accent-glow:   rgba(212, 175, 55, 0.15);
+  --accent-glow-strong: rgba(212, 175, 55, 0.25);
+  --text-main:     #F3F4F6;
+  --text-muted:    #8E9196;
+  --overlay-dark:  rgba(10, 10, 11, 0.70);
+  --error:         #E53E3E;
+  --success:       #38A169;
+
+  /* ── Tipografía ── */
+  --font-serif:    'Playfair Display', Georgia, serif;
+  --font-sans:     'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ── Tamaños tipográficos (clamp fluid) ── */
+  --fs-hero:       clamp(2.4rem, 5vw, 4.2rem);
+  --fs-h2:         clamp(1.8rem, 3.5vw, 2.8rem);
+  --fs-h3:         clamp(1.2rem, 2vw, 1.5rem);
+  --fs-body:       clamp(0.95rem, 1.2vw, 1.05rem);
+  --fs-small:      clamp(0.8rem, 1vw, 0.875rem);
+  --fs-price:      clamp(1.1rem, 1.5vw, 1.3rem);
+  --fs-btn:        0.875rem;
+
+  /* ── Espaciado ── */
+  --section-py-mobile:  3.5rem;
+  --section-py-desktop: 6.5rem;
+  --container-max:      1200px;
+  --container-px:       1.5rem;
+
+  /* ── Transiciones ── */
+  --ease-smooth:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.3s;
+  --duration-slow: 0.5s;
+
+  /* ── Bordes y Radios ── */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* ── Z-index Scale ── */
+  --z-header:  100;
+  --z-menu:    200;
+  --z-cart:    300;
+  --z-overlay: 250;
+}

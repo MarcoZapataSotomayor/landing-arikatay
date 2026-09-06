@@ -1,0 +1,112 @@
+/* ══════════════════════════════════════════════
+   HERO.CSS — Sección Hero Principal
+   ══════════════════════════════════════════════ */
+
+.hero {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Grid Hero ── */
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* ── Contenido de texto ── */
+.hero__content {
+  text-align: center;
+  order: 2;
+}
+
+.hero__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.hero__title .text-accent {
+  display: block;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__subtitle {
+  font-size: var(--fs-body);
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 2.25rem;
+  margin-inline: auto;
+}
+
+/* ── Imagen Hero ── */
+.hero__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  position: relative;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5));
+  object-fit: cover;
+}
+
+/* Resplandor sutil detrás de la imagen */
+.hero__visual::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+}
+
+/* ── Desktop (≥ 1024px) ── */
+@media (min-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .hero__content {
+    text-align: left;
+    order: 1;
+  }
+
+  .hero__subtitle {
+    margin-inline: 0;
+  }
+
+  .hero__visual {
+    order: 2;
+  }
+
+  .hero__image {
+    max-width: 460px;
+  }
+
+  .hero__visual::before {
+    width: 400px;
+    height: 400px;
+  }
+}

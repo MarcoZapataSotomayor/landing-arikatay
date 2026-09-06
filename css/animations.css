@@ -1,0 +1,121 @@
+/* ══════════════════════════════════════════════
+   ANIMATIONS.CSS — Keyframes y Micro-Animaciones
+   ══════════════════════════════════════════════ */
+
+/* ═══ Fade-in al scroll (Intersection Observer) ═══ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--duration-slow) var(--ease-smooth),
+              transform var(--duration-slow) var(--ease-smooth);
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variantes con delay para efecto cascada */
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+
+/* ═══ Shimmer en badges ═══ */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.product-card__badge {
+  background: linear-gradient(90deg,
+    var(--accent) 0%,
+    var(--accent-hover) 50%,
+    var(--accent) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+  color: var(--bg-primary);
+}
+
+/* ═══ Pulse sutil en CTA hero ═══ */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.35); }
+  50%      { box-shadow: 0 0 0 14px rgba(212, 175, 55, 0); }
+}
+
+.hero .btn--primary {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.hero .btn--primary:hover {
+  animation: none;
+}
+
+/* ═══ Bounce del counter del carrito ═══ */
+@keyframes bounce-in {
+  0%   { transform: scale(0.3); }
+  50%  { transform: scale(1.25); }
+  70%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.cart-count.bounce {
+  animation: bounce-in 0.4s var(--ease-smooth);
+}
+
+/* ═══ Slide-in para el hero ═══ */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero__content {
+  animation: slide-up 0.8s var(--ease-smooth) 0.2s both;
+}
+
+.hero__visual {
+  animation: slide-up 0.8s var(--ease-smooth) 0.4s both;
+}
+
+/* ═══ Float sutil para la imagen hero ═══ */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-10px); }
+}
+
+.hero__image {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ═══ Línea dorada decorativa ═══ */
+@keyframes line-expand {
+  from { width: 0; }
+  to   { width: 60px; }
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin: 1rem auto 0;
+  animation: line-expand 0.6s var(--ease-smooth) both;
+}

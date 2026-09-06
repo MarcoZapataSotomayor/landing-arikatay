@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "id": "jw-black-label",
+      "name": "Johnnie Walker Black Label",
+      "volume": "750ml",
+      "price": 95.00,
+      "currency": "PEN",
+      "category": "whisky",
+      "categoryLabel": "Whisky Premium",
+      "image": "assets/images/products/jw-black-label.png",
+      "imageAlt": "Botella de Johnnie Walker Black Label 750ml",
+      "badge": "Popular",
+      "inStock": true
+    },
+    {
+      "id": "old-parr-12",
+      "name": "Old Parr 12 Años",
+      "volume": "750ml",
+      "price": 85.00,
+      "currency": "PEN",
+      "category": "whisky",
+      "categoryLabel": "Whisky",
+      "image": "assets/images/products/old-parr-12.png",
+      "imageAlt": "Botella de Old Parr 12 Años 750ml",
+      "badge": null,
+      "inStock": true
+    },
+    {
+      "id": "riccadonna-asti",
+      "name": "Riccadonna Asti",
+      "volume": "750ml",
+      "price": 50.00,
+      "currency": "PEN",
+      "category": "espumante",
+      "categoryLabel": "Espumante",
+      "image": "assets/images/products/riccadonna-asti.png",
+      "imageAlt": "Botella de Espumante Riccadonna Asti D.O.C.G. 750ml",
+      "badge": "Exclusivo",
+      "inStock": true
+    },
+    {
+      "id": "baileys-750",
+      "name": "Baileys Original",
+      "volume": "750ml",
+      "price": 64.50,
+      "currency": "PEN",
+      "category": "licor",
+      "categoryLabel": "Licor Cremoso",
+      "image": "assets/images/products/baileys.png",
+      "imageAlt": "Botella de Baileys Original Irish Cream 750ml",
+      "badge": null,
+      "inStock": true
+    },
+    {
+      "id": "jagermeister-700",
+      "name": "Jägermeister",
+      "volume": "700ml",
+      "price": 68.00,
+      "currency": "PEN",
+      "category": "licor",
+      "categoryLabel": "Licor de Hierbas",
+      "image": "assets/images/products/jagermeister.png",
+      "imageAlt": "Botella de Jägermeister Licor de Hierbas 700ml",
+      "badge": null,
+      "inStock": true
+    },
+    {
+      "id": "casillero-del-diablo",
+      "name": "Casillero del Diablo Merlot",
+      "volume": "750ml",
+      "price": 30.00,
+      "currency": "PEN",
+      "category": "vino",
+      "categoryLabel": "Vino Tinto",
+      "image": "assets/images/products/casillero-del-diablo.png",
+      "imageAlt": "Botella de Vino Casillero del Diablo Merlot 750ml",
+      "badge": null,
+      "inStock": true
+    }
+  ]
+}
